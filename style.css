@@ -1,0 +1,559 @@
+/* Este repositório base fué creado para ayudarte en caso que no sepas como comenzar, recuerda que el portafolio es tu carta de presentación y debes darle tu cara, por eso te invitamos a personalizarlo según tu estilo y preferencias no te limites apenas al layout propuesto en figma  
+*/
+:root {
+    --color-de-fondo: #F5F5F5;
+    --color-de-fondo-menu: #ffffff;
+    --color-de-link: #000000;
+    --color-de-areas: #EAF2FD;
+    --color-de-boton: #2A7AE4;
+}
+
+body {
+    background-color: var(--color-de-fondo);
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    text-align: center;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-de-link);
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+.cabecera {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--color-de-fondo-menu);
+}
+
+.cabecera__logo {
+    max-width: 32px;
+  height: max-content;
+  display: flex;
+  align-self: center;
+}
+
+.cabecera__titulo {
+    font-size: 15px;
+    margin-left: 10px;
+}
+.cabecera__contenedor{
+    display: flex;
+}
+
+.navegacion__elemento a {
+    font-size: 0.9rem;
+    margin-left: 30px;
+}
+
+.navegacion__elemento:nth-child(1),
+.navegacion__elemento:nth-child(2),
+.navegacion__elemento:nth-child(3),
+.navegacion__elemento:nth-child(4),
+.navegacion__elemento:nth-child(5){
+    display: none;
+}
+
+.boton{
+    align-self: flex-start; 
+   
+}
+.boton__general{
+  width: 133px;
+  height: 40px;
+  font-size: 16px;
+  background: var(--color-de-boton); /* color de fondo */
+  color: var(--color-de-fondo-menu); /* color de fuente */
+  border: 2px solid var(--color-de-boton); /* tamaño y color de borde */
+  border-radius: 3px; /* redondear bordes */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+}
+.boton__general:hover{
+    color: var(--color-de-boton);
+}
+.boton__general::after {
+  content: "";
+  background: var(--color-de-fondo-menu); /* color de fondo hover */
+  position: absolute;
+  z-index: -1;
+  padding: 16px 20px;
+  display: block;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(45deg) scale(0, 1);
+  transition: all 0.3s ease;
+  }
+  .boton__general:hover::after {
+    transition: all 0.3s ease-out;
+    transform: skewX(45deg) scale(1, 1);
+  }
+
+
+
+  .boton__secundario {
+    width: 133px;
+    height: 40px;
+    font-size: 16px;
+    background: var(--color-de-fondo-menu); /* color de fondo */
+    color: var(--color-de-boton); /* color de fuente */
+    border: 2px solid var(--color-de-boton); /* tamaño y color de borde */
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    transition: border 0.3s ease; /* Transición suave para el borde */
+    cursor: pointer;
+  }
+  
+  .boton__secundario:hover {
+    color: #fff; /* color de fuente hover */
+    border: 2px solid var(--color-de-boton); /* Cambia el borde cuando es hover */
+  }
+  
+  .boton__secundario::after {
+    content: "";
+    background: var(--color-de-boton); /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(45deg) scale(0, 1);
+    transition: all 0.3s ease;
+  }
+  
+  .boton__secundario:hover::after {
+    transition: all 0.3s ease-out;
+    transform: skewX(45deg) scale(1, 1);
+  }
+  
+
+
+/* ------------------------------ Sección Presentación ------------------------------*/
+.presentacion{
+    text-align: start;
+    display: flex;
+    flex-direction:  column;
+    padding: 16px;
+}
+.presentacion__foto{
+    width: 150px;
+    border-radius: 50%; /* Esto hace que la imagen sea redonda */
+  object-fit: cover; 
+}
+.redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:0 25px 0 0;
+}
+
+/* ------------------------------ Sección sobre mí ----------------------------------*/
+.sobre-mi__contenedor{
+    background-color: var(--color-de-areas); 
+    padding: 16px;
+    text-align: justify;
+}
+
+/*------------------------------ Sección de Habilidades ------------------------------*/
+
+.habilidades__lista{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding:16px 16px 16px 16px;
+    
+}
+.habilidades__elemento{
+   flex-grow: 1;
+   height: 140px;
+   width: 156px;
+   background-color:var(--color-de-fondo-menu);
+   display: flex;
+   flex-direction: column;
+   align-items:center;
+   justify-content: center;
+   line-height: 1;  
+  text-align: left;
+}
+
+/*------------------------------ Sección de Aficiones --------------------------------*/
+.aficiones{
+    font-weight: bold;
+}
+.aficiones__lista{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding:16px 16px 16px 16px;
+}
+.aficiones__elemento{
+    flex-grow: 1;
+    height: 140px;
+    width: 156px;
+   background-color:var(--color-de-fondo-menu);
+   display: flex;
+   flex-direction: column;
+   align-items:center;
+   justify-content: center;
+}
+
+/*------------------------------ Formación Académica --------------------------------*/
+
+.formacion{
+    background-color: var(--color-de-areas);
+    
+}
+.formacion__lista{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding:16px 32px 16px 32px;
+ 
+}
+.formacion__icono{
+    background-color: var(--color-de-fondo-menu);
+}
+.formacion__img{
+    width: 260px;
+    height: 230px;
+}
+
+.formacion__informacion{
+    text-align: start;
+    padding-block-end: 24px;
+}
+
+/*---------------- Experiencia Profecional---------------*/
+
+
+.proyecto__lista{
+    display: flex;
+    flex-direction: column;
+    padding:16px 32px 16px 32px;
+}
+.img__proyecto{
+    width: 100%;
+    height: auto;
+}
+.proyectos__contenedor{
+    text-align: start;
+    padding-block-end: 26px;
+}
+
+/*------------------------------ Sección de Contacto ---------------------------------*/
+
+.contacto{
+    background-color: var(--color-de-areas); 
+    padding:16px 32px 16px 32px;
+    text-align: start;
+}
+
+.contacto__formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.contacto__campo{
+    width: 100%;
+    height: 56px;
+    border-radius: 4px;
+    border: none;
+}
+
+.contacto__campo--textarea{
+    height: 133px;
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+.img__contact:nth-child(1){
+    display: none;
+}
+
+/* ------------------------------ Responsividad ---------------------------------------*/
+
+/* Tablets y pantallas más grandes */
+@media (min-width: 768px) {
+    .cabecera {
+        justify-content: space-between;
+        padding: 16px 32px 16px 32px ;
+    }
+    .cabecera__contenedor{
+        display: flex;
+        align-items: center;   
+    }
+
+    .cabecera__logo {
+        max-width: 100px;
+    }
+
+    .cabecera__titulo {
+        font-size: 1.5rem;
+    }
+
+    .navegacion__lista {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin-top: 0;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1rem;
+    }
+
+    .presentacion{
+        flex-direction: row-reverse;
+        padding: 32px 32px 32px 32px ;
+        font-size: 18px;
+    }
+    .presentacion__contenedor{
+        padding-right: 40px;
+    }
+    .presentacion__foto{
+        width: 190px;
+        height: 190px;
+        align-self: center;
+    }
+
+
+    .sobre-mi__contenedor{
+        padding: 32px 32px 32px 32px ;
+    }
+
+
+    .habilidades__lista{
+        padding: 32px 32px 32px 32px ;
+        gap: 10px;
+    }
+    .habilidades__elemento{
+        width: 224px;
+        height: 118px;
+    }
+    
+
+    .aficiones__lista{
+        padding: 32px 32px 32px 32px ;
+        gap: 10px;
+    }
+    .aficiones__elemento{
+        width: 224px;
+        height: 118px;
+    }
+
+
+    .formacion{
+        padding: 32px 32px 32px 32px ;
+    }
+    .formacion__lista{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 16px 0;
+    }
+    .formacion__icono{
+        width: 225px;
+    }
+    .formacion__img{
+            width: 224px;
+            height: 180px;
+    }
+    
+
+
+    .proyectos{
+        padding: 32px 32px 32px 32px ;
+    }
+
+    .img__contact:nth-child(1){
+        display: none;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
+    
+    .cabecera{
+        padding: 16px 153px 32px 153px ;
+        background-color: var(--color-de-fondo);
+    }
+
+    .navegacion__elemento:nth-child(1),
+    .navegacion__elemento:nth-child(2),
+    .navegacion__elemento:nth-child(3),
+    .navegacion__elemento:nth-child(4),
+    .navegacion__elemento:nth-child(5){
+        display: flex;
+    }      
+    .cabecera__titulo {
+        font-size: 20px;
+    }
+      
+    .navegacion__lista {
+        margin: 0;
+        padding: 0;
+        gap: 6px; 
+    }
+    .navegacion__elemento a {
+        font-size: 1.1rem;
+    }
+
+    .presentacion{
+        justify-content: center;
+        padding: 58px 156px 28px 156px;
+    }
+    .presentacion__titulo{
+        font-size: 46px;
+        color: #464646;
+        line-height: 1.1;
+    }
+    .presentacion__contenedor{
+        padding-right: 26px;
+    }
+    .presentacion__foto{
+        width: 380px;
+        height: 380px;
+    }
+    .presentacion__subtitulo{
+        font-size: 22px;
+    }
+    .redes{
+        justify-content: flex-start;
+        gap: 55px;
+    }
+    .img__redes{
+        width: 20px;
+    }
+    .sobre-mi{
+        padding-right: 407px;
+    }
+    .sobre-mi__contenedor{
+        padding: 58px 156px 28px 156px;
+    }
+
+    .habilidades{
+        padding: 58px 156px 28px 156px;
+    }
+    .habilidades__elemento{
+        width: 167px;
+        height: 176px;
+        padding-left: 13px;
+        justify-content: end;
+        align-items: self-start;
+    }
+    .habilidades__lista{
+        gap: 16px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .aficiones{
+        padding: 0px 156px 28px 156px;
+    }
+    .aficiones__elemento{
+        width: 167px;
+        height: 176px;
+        padding-left: 13px;
+        justify-content: end;
+        align-items: self-start;
+    }
+
+    .aficiones__lista{
+        gap: 16px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .formacion{
+        padding: 54px 156px 28px 156px;
+    }
+    .formacion__elemento{
+        width: 368px;
+        height: 347px;
+        padding-block-end: 82px;
+    }
+    .formacion__lista{
+        display: flex;
+        justify-content: center;
+    }
+    .formacion__icono {
+        width: 368px;
+        height: 286px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .formacion__icono img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .proyectos{
+        padding: 54px 156px 28px 156px;
+    }
+    .proyecto__elemento{
+        display: flex;
+        flex-direction: row;
+        width: 1193px;
+        height: 406px;
+        gap: 50px;
+        margin-bottom: 50px;
+    }
+
+    .proyecto__elemento:nth-child(2){
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .proyectos__contenedor{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 0;
+        width: 363px;
+    }
+    .proyecto__lista{
+        padding: 16px 32px 16px 0px;
+    }
+    .img__proyecto{
+        width: 780px;
+        height: 406px;
+    }
+
+    .contacto {
+        display: flex;
+        flex-direction: row;
+        padding: 54px 156px 28px 156px;
+        gap: 20px;
+        padding-bottom: 64px;
+    }
+    .img__contact:nth-child(1){
+        display: flex;
+        width: 460px;
+        height: 450px;
+        flex-direction: column;
+    }
+
+    
+}
