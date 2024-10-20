@@ -1,4 +1,4 @@
-# Challenge ONE | Front End -  Portafolio
+# Challenge ONE-Oracle | Front End -  Portafolio
 
-### ¡Bienvenido al proyecto base del Portafolio ! Pasos principales
+### ¡Bienvenido a mi Portafolio ! 
 
